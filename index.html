@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="shortcut icon" href="./Images/icon/icons8-lock-48.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a192f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #112240;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 350px;
+        }
+
+        .container h1 {
+            font-size: 24px;
+            color: #64ffda;
+            margin-bottom: 20px;
+        }
+
+        .container label {
+            font-size: 14px;
+            color: #ccd6f6;
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        .container .input-area {
+            width: 100%;
+            height: 35px;
+            margin-bottom: 15px;
+            padding: 5px 10px;
+            border: 1px solid #64ffda;
+            border-radius: 5px;
+            background-color: #0a192f;
+            color: #fff;
+        }
+
+        .container .input-area::placeholder {
+            color: #8892b0;
+        }
+
+        .container button {
+            width: 100%;
+            height: 40px;
+            margin-top: 10px;
+            background-color: #64ffda;
+            color: #0a192f;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .container button:hover {
+            background-color: #52e0c4;
+        }
+
+        .container h3 {
+            font-size: 14px;
+            color: #8892b0;
+            margin-top: 15px;
+        }
+
+        .container h3 a {
+            color: #64ffda;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .success-message {
+            margin-top: 15px;
+            color: #64ffda;
+            font-size: 14px;
+            display: none;
+        }
+
+        .error-message {
+            margin-top: 15px;
+            color: #ff6f61;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Login System</h1>
+        <form id="login-form">
+            <label for="email">Enter your email</label>
+            <input class="input-area" id="email" type="text" placeholder="e.g., user123@gmail.com">
+
+            <label for="password">Enter your password</label>
+            <input class="input-area" id="password" type="password" placeholder="Enter your password">
+
+            <button type="button" id="login-button">Login</button>
+            <p class="error-message" id="login-error">Invalid email or password.</p>
+        </form>
+        <h3>Don't have an account? <a href="./signup.html" id="signup-link">Sign up</a></h3>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
